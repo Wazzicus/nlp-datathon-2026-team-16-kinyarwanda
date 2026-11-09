@@ -1,31 +1,31 @@
 record_id,language,text,label,source_dataset,source_version,source_record_id,source_url,source_method,licence_or_permission,contributor_code,reviewer_code,review_status,group_id,split
-kin-001,kn,Umushinga ntiwagenze neza / ntiwageze ku ntsinzi.,negative,original,1.0,kin-001,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-002,kn,Nacitse intege cyane kubera ibisubizo.,negative,original,1.0,kin-002,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-003,kn,Serivisi twahawe ntiyari yemewe na gato.,negative,original,1.0,kin-003,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-004,kn,"Sisitemu yarahagaze, kandi ituma dutakaza ibyo twari tumaze gukora.",negative,original,1.0,kin-004,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-005,kn,Iki gicuruzwa cyangiritse ako kanya nyuma yo kukigura.,negative,original,1.0,kin-005,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-006,kn,Ntabwo nishimiye ishuri.,negative,original,1.₀,kin-006,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-007,kn,Ibiryo byatanzwe byari byangiritse kandi bitari bishya.,negative,original,1.0,kin-007,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,dev
-kin-008,kn,Uyu mwanzuro watumye habaho igihombo gikomeye cyane.,negative,original,1.0,kin-008,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,dev
-kin-009,kn,Umukiriya yafashwe mu buryo bwo kumusuzugura cyane.,negative,original,1.0,kin-009,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,test
-kin-010,kn,Ibirori byabaye akaga gakomeye cyane / byagenze nabi cyane.,negative,original,1.0,kin-010,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,test
-kin-011,kn,Nashimye serivisi z’isomero.,positive,original,1.0,kin-011,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-012,kn,Ubufasha bwatanzwe kuri uwo mushinga bwari bwiza cyane.,positive,original,1.0,kin-012,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-013,kn,Nashimye urubuga rwa interineti (website).,positive,original,1.0,kin-013,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-014,kn,Nashimye ubufasha nahawe.,positive,original,1.0,kin-014,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-015,kn,Byose byagenze nk’uko byari biteganyijwe.,positive,original,1.0,kin-015,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-016,kn,Wakoze akazi keza cyane.,positive,original,1.0,kin-016,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-017,kn,Iyi ndirimbo impa ibyishimo byinshi cyane.,positive,original,1.0,kin-017,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,dev
-kin-018,kn,Twageze ku ntego zacu zose ku gihe.,positive,original,1.0,kin-018,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,dev
-kin-019,kn,Uburyo bwo kwiyandikisha bwari bwiza cyane.,positive,original,1.0,kin-019,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,test
-kin-020,kn,Umuhango wa Misa/igikorwa cyo gusenga cyari cyiza cyane.,positive,original,1.0,kin-020,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,test
-kin-021,kn,Inama iratangira saa cyenda z’amanywa (3 PM).,neutral,original,1.0,kin-021,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-022,kn,Inyandiko igizwe n’ibice bine.,neutral,original,1.0,kin-022,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-023,kn,Ubushyuhe bw’uyu munsi ni dogere Selisiyusi 20.,neutral,original,1.0,kin-023,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-024,kn,Inka yahageze muri iki gitondo.,neutral,original,1.0,kin-024,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-025,kn,Amazi abira kuri dogere Selisiyusi 100.,neutral,original,1.0,kin-025,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-026,kn,Raporo yarashyikirijwe.,neutral,original,1.0,kin-026,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,train
-kin-027,kn,Bisi ihaguruka buri nyuma y’iminota cumi n’itanu.,neutral,original,1.0,kin-027,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,test
-kin-028,kn,Icyumba cyasizwe irangi ry’ubururu bwerurutse.,neutral,original,1.0,kin-028,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,test
-kin-029,kn,Supermarket ifungura ku wa Mbere.,neutral,original,1.0,kin-029,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,dev
-kin-030,kn,Hari itangazo ku rukuta.,neutral,original,1.0,kin-030,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,approved,group_001,dev
+kin-001,kn,Umushinga ntiwagenze neza / ntiwageze ku ntsinzi.,negative,original,1.0,kin-001,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_train,train
+kin-002,kn,Nacitse intege cyane kubera ibisubizo.,negative,original,1.0,kin-002,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_train,train
+kin-003,kn,Serivisi twahawe ntiyari yemewe na gato.,negative,original,1.0,kin-003,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_train,train
+kin-004,kn,"Sisitemu yarahagaze, kandi ituma dutakaza ibyo twari tumaze gukora.",negative,original,1.0,kin-004,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_train,train
+kin-005,kn,Iki gicuruzwa cyangiritse ako kanya nyuma yo kukigura.,negative,original,1.0,kin-005,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_train,train
+kin-006,kn,Ntabwo nishimiye ishuri.,negative,original,1.0,kin-006,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_train,train
+kin-007,kn,Ibiryo byatanzwe byari byangiritse kandi bitari bishya.,negative,original,1.0,kin-007,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_dev,dev
+kin-008,kn,Uyu mwanzuro watumye habaho igihombo gikomeye cyane.,negative,original,1.0,kin-008,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_dev,dev
+kin-009,kn,Umukiriya yafashwe mu buryo bwo kumusuzugura cyane.,negative,original,1.0,kin-009,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_test,test
+kin-010,kn,Ibirori byabaye akaga gakomeye cyane / byagenze nabi cyane.,negative,original,1.0,kin-010,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neg_test,test
+kin-011,kn,Nashimye serivisi z’isomero.,positive,original,1.0,kin-011,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_train,train
+kin-012,kn,Ubufasha bwatanzwe kuri uwo mushinga bwari bwiza cyane.,positive,original,1.0,kin-012,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_train,train
+kin-013,kn,Nashimye urubuga rwa interineti (website).,positive,original,1.0,kin-013,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_train,train
+kin-014,kn,Nashimye ubufasha nahawe.,positive,original,1.0,kin-014,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_train,train
+kin-015,kn,Byose byagenze nk’uko byari biteganyijwe.,positive,original,1.0,kin-015,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_train,train
+kin-016,kn,Wakoze akazi keza cyane.,positive,original,1.0,kin-016,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_train,train
+kin-017,kn,Iyi ndirimbo impa ibyishimo byinshi cyane.,positive,original,1.0,kin-017,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_dev,dev
+kin-018,kn,Twageze ku ntego zacu zose ku gihe.,positive,original,1.0,kin-018,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_dev,dev
+kin-019,kn,Uburyo bwo kwiyandikisha bwari bwiza cyane.,positive,original,1.0,kin-019,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_test,test
+kin-020,kn,Umuhango wa Misa/igikorwa cyo gusenga cyari cyiza cyane.,positive,original,1.0,kin-020,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_pos_test,test
+kin-021,kn,Inama iratangira saa cyenda z’amanywa (3 PM).,neutral,original,1.0,kin-021,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_train,train
+kin-022,kn,Inyandiko igizwe n’ibice bine.,neutral,original,1.0,kin-022,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_train,train
+kin-023,kn,Ubushyuhe bw’uyu munsi ni dogere Selisiyusi 20.,neutral,original,1.0,kin-023,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_train,train
+kin-024,kn,Inka yahageze muri iki gitondo.,neutral,original,1.0,kin-024,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_train,train
+kin-025,kn,Amazi abira kuri dogere Selisiyusi 100.,neutral,original,1.0,kin-025,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_train,train
+kin-026,kn,Raporo yarashyikirijwe.,neutral,original,1.0,kin-026,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_train,train
+kin-027,kn,Bisi ihaguruka buri nyuma y’iminota cumi n’itanu.,neutral,original,1.0,kin-027,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_test,test
+kin-028,kn,Icyumba cyasizwe irangi ry’ubururu bwerurutse.,neutral,original,1.0,kin-028,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_test,test
+kin-029,kn,Supermarket ifungura ku wa Mbere.,neutral,original,1.0,kin-029,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_dev,dev
+kin-030,kn,Hari itangazo ku rukuta.,neutral,original,1.0,kin-030,not_applicable,manual,CC-BY-4.0,contributor_001,reviewer_001,independently_reviewed,group_neu_dev,dev
