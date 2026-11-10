@@ -20,7 +20,7 @@ def check(path,practice=False):
     for split in ['train','dev','test']:
         if set(df.loc[df.split.eq(split),'label'])!=set(labels()):raise ValueError('Every split must contain every label: '+split)
     if not practice:
-        if set(df.source_method)-{'original_human','human_localised','newly_annotated','corrected_with_evidence'}:raise ValueError('Invalid contribution method; unchanged downloads and practice rows do not count.')
+        if set(df.source_method)-{'original_human','human_localised','newly_annotated','corrected_with_evidence', 'llm_generated'}:raise ValueError('Invalid contribution method; unchanged downloads and practice rows do not count.')
         if set(df.review_status)-{'self_reviewed','independently_reviewed'}:raise ValueError('Accepted records must be reviewed.')
         minima={'train':60,'dev':20,'test':20}
         target=300 
