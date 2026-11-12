@@ -32,15 +32,3 @@ def classification_score(model,frame,ordered):
     return {'accuracy':accuracy_score(frame.label,pred),'macro_f1':f1_score(frame.label,pred,labels=ordered,average='macro',zero_division=0),
     'report':classification_report(frame.label,pred,labels=ordered,output_dict=True,zero_division=0),
     'confusion_matrix':confusion_matrix(frame.label,pred,labels=ordered).tolist(),'label_order':ordered}
-def semantic_score(model,memory,frame):
-    intents=model.predict(frame.text);tp=fp=fn=exact=0;predictions=[]
-    for intent, (_,row) in zip(intents,frame.iterrows()):
-        got=extract(row.text,memory);gold=json.loads(row.slots_json)
-        a=slot_keys(got);b=slot_keys(gold);tp+=len(a&b);fp+=len(a-b);fn+=len(b-a)
-        exact+=int(intent==row.label and a==b)
-        predictions.append({'record_id':row.record_id,'intent':intent,'slots':got})
-    precision=tp/(tp+fp) if tp+fp else 0.;recall=tp/(tp+fn) if tp+fn else 0.
-    return {'slot_precision':precision,'slot_recall':recall,'slot_f1':2*tp/(2*tp+fp+fn) if 2*tp+fp+fn else 0.,
-            'frame_exact_match':exact/len(frame),'predictions':predictions,
-            'definition':'Exact slot type and character span; frame requires correct intent and complete slot set.'}
-
