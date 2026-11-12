@@ -4,11 +4,11 @@ import joblib,pandas as pd
 from core import labels,fingerprint,classification_score
 from validate import check
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--data',default='data/contribution.csv');p.add_argument('--track',choices=['intent','sentiment','semantic'],default='intent');p.add_argument('--practice',action='store_true');a=p.parse_args()
-    df=check(a.data,a.practice,a.track);out=Path('artifacts')/a.track;pack=joblib.load(out/'model.joblib')
-    if pack['practice']!=a.practice or pack['track']!=a.track or pack['data_sha256']!=fingerprint(df):raise ValueError('Dataset or run mode changed since training. Check and retrain deliberately.')
-    test=df[df.split.eq('test')];ordered=labels(a.track)
-    result={'track':a.track,'practice':a.practice,'test_size':len(test),'model':classification_score(pack['model'],test,ordered),'majority_baseline':classification_score(pack['dummy'],test,ordered)}
+    p=argparse.ArgumentParser();p.add_argument('--data',default='data/contribution.csv');p.add_argument('--practice',action='store_true');a=p.parse_args()
+    df=check(a.data,a.practice);out=Path('artifacts/baseline');pack=joblib.load(out/'model.joblib')
+    if pack['practice']!=a.practice or pack['data_sha256']!=fingerprint(df):raise ValueError('Dataset or run mode changed since training. Check and retrain deliberately.')
+    test=df[df.split.eq('test')];ordered=labels()
+    result={'track':'sentiment','practice':a.practice,'test_size':len(test),'model':classification_score(pack['model'],test,ordered),'majority_baseline':classification_score(pack['dummy'],test,ordered)}
     pred=pack['model'].predict(test.text);test.assign(predicted=pred).to_csv(out/'test_predictions.csv',index=False)
     (out/'test_metrics.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
     print('\nPRACTICE TEACHING DATA; NOT A BENCHMARK' if a.practice else '\nFINAL TEST RESULTS')

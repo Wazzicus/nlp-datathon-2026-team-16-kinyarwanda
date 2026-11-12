@@ -1,20 +1,6 @@
 {
   "track": "sentiment",
-  "experiment_name": "E00",
   "practice": false,
-  "training_records": 207,
-  "development_records": 69,
-  "duplicate_training_records_removed": 0,
-  "training_distribution": {
-    "positive": 69,
-    "negative": 69,
-    "neutral": 69
-  },
-  "development_distribution": {
-    "positive": 20,
-    "negative": 23,
-    "neutral": 26
-  },
   "model": {
     "accuracy": 0.7681159420289855,
     "macro_f1": 0.7666666666666666,

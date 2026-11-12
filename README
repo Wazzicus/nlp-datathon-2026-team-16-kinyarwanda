@@ -9,3 +9,228 @@ Kinyarwanda
 
 ## Task
 Sentiment Analysis
+
+## Kinyarwanda Sentiment Analysis
+
+SENTI-RW is a machine-learning research project focused on classifying the sentiment of Kinyarwanda text into three categories: **positive, negative and neutral**.
+
+The project explores the application of traditional machine-learning techniques to a low-resource language, using character-level TF-IDF features and a Linear Support Vector Classifier (LinearSVC).
+
+It includes a complete experimental pipeline, model evaluation, a reusable Python inference module and an interactive Streamlit demonstration.
+
+---
+
+## Features
+
+- **Three-class sentiment classification:** Positive, negative and neutral.
+- **Character-level text representation:** TF-IDF features extracted from character n-grams.
+- **Machine-learning classifier:** Linear Support Vector Classifier.
+- **Evaluation pipeline:** Accuracy, macro-F1, per-class precision, recall and F1-score.
+- **Interactive demonstration:** A Streamlit interface for classifying user-provided Kinyarwanda text.
+- **Reusable inference module:** Predictions can be obtained directly from Python.
+
+## Model
+
+The final baseline model uses the following configuration:
+
+| Component | Configuration |
+|---|---|
+| Feature extraction | TF-IDF |
+| Analyzer | Character |
+| N-gram range | (2, 5) |
+| Classifier | LinearSVC |
+| Regularisation parameter (C) | 1.0 |
+| Classification task | Three-class sentiment |
+
+The model uses character-level features to represent Kinyarwanda text. This approach allows it to capture subword patterns without depending entirely on a large vocabulary of individual words.
+
+## Dataset
+
+The original contribution dataset contains **345 labelled records** distributed across three sentiment classes.
+
+The dataset is divided into three subsets:
+
+| Split | Records | Purpose |
+|---|---:|---|
+| Training | 207 | Model training |
+| Development | 69 | Experimentation and model selection |
+| Test | 69 | Final held-out evaluation |
+| **Total** | **345** | |
+
+The training set contains 69 examples per class.
+
+Additional data sources, including AfriSenti and KINNEWS/KIRNEWS, were investigated during experimentation. However, the original contribution dataset produced the strongest development-set performance among the configurations evaluated. Consequently, the final baseline was trained using the original contribution dataset alone.
+
+Dataset provenance and annotation information are maintained in the project's data schema. Dataset redistribution is subject to the applicable source licences and permissions.
+
+## Experimental Results
+
+The final baseline was evaluated on the held-out test set.
+
+| Metric | Result |
+|---|---:|
+| Accuracy | 65.22% |
+| Macro-F1 | 65.28% |
+
+### Per-class F1
+
+| Sentiment | F1-score |
+|---|---:|
+| Positive | 59.6% |
+| Negative | 66.7% |
+| Neutral | 69.6% |
+
+The majority-class baseline achieved a macro-F1 score of 16.7%.
+
+The model achieved a development macro-F1 of approximately 76.67%, compared with 65.28% on the held-out test set.
+
+This difference highlights the challenges of generalisation when working with relatively small datasets.
+
+### Error Analysis
+
+Inspection of test predictions revealed several recurring challenges:
+
+- Interpreting negation and its effect on sentiment.
+- Distinguishing genuinely positive or negative statements from text containing sentiment-associated vocabulary.
+- Understanding sentiment that depends on context rather than individual words.
+- Distinguishing factual statements from statements expressing an opinion or evaluation.
+
+These observations provide useful directions for future improvements.
+
+## Installation
+
+### Requirements
+
+- Python 3.10 or later (use the version tested by the project environment).
+- pip.
+- Git.
+
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd <repository-directory>
+```
+
+### 2. Create a virtual environment
+
+Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+Linux/macOS:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running the Demo
+
+Launch the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+Open the local URL displayed in the terminal, normally:
+
+```text
+http://localhost:8501
+```
+
+Enter a Kinyarwanda sentence or select one of the demonstration examples to receive a sentiment prediction.
+
+## Using the Model in Python
+
+The trained model can also be accessed programmatically through the reusable predictor module.
+
+```python
+from predictor import SentimentPredictor
+
+predictor = SentimentPredictor()
+
+result = predictor.predict(
+    "Nishimiye cyane uko iki gikorwa cyagenze."
+)
+
+print(result["sentiment"])
+print(result["decision_scores"])
+```
+
+The predictor returns the input text, predicted sentiment and class decision scores.
+
+**Note:** LinearSVC decision scores are not calibrated probabilities. They should not be interpreted as percentage confidence values.
+
+## Project Structure
+
+```text
+SENTI-RW/
+│
+├── app.py                  # Streamlit demonstration
+├── predictor.py            # Reusable inference module
+├── test_predictor.py       # Inference tests
+├── requirements.txt        # Python dependencies
+├── README.md
+│
+├── core.py                 # Shared project utilities
+├── validate.py             # Dataset validation
+│
+├── data/                   # Dataset files
+│
+├── artifacts/              # Models and experiment outputs
+│
+└── docs/                   # Project documentation
+```
+
+The actual repository may contain additional scripts and experiment-specific directories.
+
+## Limitations
+
+SENTI-RW is an experimental research prototype rather than a production-ready sentiment analysis service.
+
+Its main limitations include:
+
+1. **Limited training data:** The final model was trained using only 207 examples.
+2. **Generalisation:** The difference between development and test performance suggests that the model may struggle with unseen examples.
+3. **Contextual understanding:** Character-level TF-IDF does not provide deep semantic or contextual understanding.
+4. **Negation:** The model may misinterpret statements where negation changes the overall sentiment.
+5. **Annotation quality:** Human interpretation and labelling decisions can introduce subjectivity.
+6. **Domain coverage:** Performance may vary considerably across different topics, writing styles and text sources.
+
+Predictions should therefore be treated as model estimates, not definitive interpretations of the author's intended sentiment.
+
+## Future Work
+
+Potential improvements include:
+
+- Expanding the dataset with additional independently reviewed Kinyarwanda examples.
+- Improving annotation consistency and inter-annotator agreement.
+- Investigating contextual multilingual language models.
+- Exploring methods for better handling negation and linguistic context.
+- Evaluating performance across different domains.
+- Calibrating prediction probabilities where appropriate.
+- Improving the model's robustness to spelling variations and informal language.
+
+## Technologies
+
+- Python
+- pandas
+- scikit-learn
+- joblib
+- Streamlit
+
+## Acknowledgements
+
+This project builds on the broader research and resources available for low-resource African language NLP, including the AfriSenti and KINNEWS/KIRNEWS datasets.
+
+Their respective authors and contributors are acknowledged for making these resources available to the research community.
